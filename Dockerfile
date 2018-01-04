@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM oracle/JDK:8
 MAINTAINER Nico Hoffmann (nico.hoffmann@catworkx.com)
 
 ENV RUN_USER            daemon
