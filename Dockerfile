@@ -90,7 +90,7 @@ USER daemon:daemon
 VOLUME ["/var/atlassian/confluence", "/opt/atlassian/confluence/logs"]
 
 # Expose default HTTP connector port.
-EXPOSE 8080
+EXPOSE 8090
 
 # Set the default working directory as the installation directory.
 WORKDIR /var/atlassian/confluence
