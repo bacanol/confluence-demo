@@ -27,12 +27,14 @@ RUN yum makecache fast \
  && yum clean all
 
 RUN ansible-galaxy install\
-    williamyeh.oracle-java
+    srsp.oracle-java 
 
 RUN mkdir /tmp/ansible
 WORKDIR /tmp/ansible
 ADD java.yml /tmp/ansible/java.yml
-ADD java/jdk-8u151-linux-x64.rpm /tmp/ansible/files/jdk-8u151-linux-x64.rpm
+## Downloading Java
+#RUN wget --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/$JAVA_VERSION-$BUILD_VERSION/jdk-$JAVA_VERSION-linux-x64.rpm" -O /tmp/jdk-8-linux-x64.rpm
+#ADD java/jdk-8u151-linux-x64.rpm /tmp/ansible/files/jdk-8u151-linux-x64.rpm
 RUN ansible-playbook -i localhost, java.yml
 
 # Disable requiretty.
