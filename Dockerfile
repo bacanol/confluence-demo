@@ -20,10 +20,10 @@ WORKDIR $CONFLUENCE_HOME
 CMD ["/entrypoint.sh", "-fg"]
 ENTRYPOINT ["/sbin/tini", "--"]
 
-RUN apk update -qq \
-    && update-ca-certificates \
-    && apk add ca-certificates wget curl openssh bash procps openssl perl ttf-dejavu tini libc6-compat \
-    && rm -rf /var/lib/{apt,dpkg,cache,log}/ /tmp/* /var/tmp/*
+RUN apk update -qq 
+RUN update-ca-certificates 
+RUN apk add ca-certificates wget curl openssh bash procps openssl perl ttf-dejavu tini libc6-compat 
+RUN rm -rf /var/lib/{apt,dpkg,cache,log}/ /tmp/* /var/tmp/*
 
 COPY entrypoint.sh              /entrypoint.sh
 
