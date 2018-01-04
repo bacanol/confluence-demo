@@ -1,6 +1,5 @@
-FROM alpine:3.7
 FROM openjdk:8-jdk-alpine
-MAINTAINER Nico Hoffmann (nico.hoffmann@catworkx.com)
+MAINTAINER Nico Hoffmann 
 
 ENV RUN_USER            daemon
 ENV RUN_GROUP           daemon
