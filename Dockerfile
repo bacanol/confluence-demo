@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.7
 FROM openjdk:8-jdk-alpine
 MAINTAINER Nico Hoffmann (nico.hoffmann@catworkx.com)
 
