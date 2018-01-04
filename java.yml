@@ -1,0 +1,7 @@
+- hosts: localhost
+  connection: local
+  roles:
+        - srsp.oracle-java
+  vars: 
+        java_install_jce: false
+
